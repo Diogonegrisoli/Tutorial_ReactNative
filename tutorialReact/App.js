@@ -1,12 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import TelaInicial from './components/TelaInicial';
-import Selecao from './components/Selecao';
-import Introducao from './components/Introducao'
-import ComponentesBasicos from './components/ComponentesBasicos';
-import Estilizacao from './components/Estilizacao';
-import Navegacao from './components/Navegacao';
-import Hooks from './components/Hooks';
+import TelaInicial from './src/screens/TelaInicial.jsx';
+import HomeScreen from './src/screens/HomeScreen';
+import LessonScreen from './src/screens/LessonScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -23,35 +19,13 @@ export default function App() {
         </Stack.Screen>
 
         <Stack.Screen
-          name='Selecao'
-          component={Selecao}>
+          name='HomeScreen'
+          component={HomeScreen}>
         </Stack.Screen>
 
         <Stack.Screen
-          name='Introducao'
-          component={Introducao}>
-        </Stack.Screen>
-
-        <Stack.Screen
-          name='ComponentesBasicos'
-          component={ComponentesBasicos}>
-        </Stack.Screen>
-
-        <Stack.Screen
-          name='Estilizacao'
-          component={Estilizacao}>
-        </Stack.Screen>
-
-        <Stack.Screen
-          name='Navegacao'
-          component={Navegacao}>
-
-        </Stack.Screen>
-
-        <Stack.Screen
-          name='Hooks'
-          component={Hooks}>
-
+          name='LessonScreen'
+          component={LessonScreen}>
         </Stack.Screen>
 
       </Stack.Navigator>
